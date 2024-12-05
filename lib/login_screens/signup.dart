@@ -63,12 +63,12 @@ class _SignupState extends State<Signup> {
                 style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     focusColor: Colors.white,
-                    suffixIcon: Icon(Icons.remove_red_eye,size: 30,),
+                    suffixIcon: const Icon(Icons.remove_red_eye,size: 30,),
                     hintText: 'Enter your password',
                     hintStyle: GoogleFonts.poppins(
-                      fontSize: 16.sp, color: Color(0xff494D58),
+                      fontSize: 16.sp, color: const Color(0xff494D58),
                     ),
-                    fillColor: Color(0xff21242D),
+                    fillColor: const Color(0xff21242D),
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -126,7 +126,7 @@ class _SignupState extends State<Signup> {
                       style: GoogleFonts.poppins(fontSize: 14.sp, color: Colors.grey.shade600, fontWeight: FontWeight.w400))),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));
                     },
                     child: RichText(text: TextSpan(
                         text: ' Log in!',

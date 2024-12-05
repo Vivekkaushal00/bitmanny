@@ -1,13 +1,6 @@
 import 'package:bitmanny/bottom_bar/bottom_bar.dart';
-import 'package:bitmanny/login_screens/forgot.dart';
-import 'package:bitmanny/login_screens/login.dart';
-import 'package:bitmanny/login_screens/signup.dart';
-import 'package:bitmanny/login_screens/verification.dart';
 import 'package:bitmanny/main_screens/bitcoin_view.dart';
-import 'package:bitmanny/main_screens/home_page.dart';
-import 'package:bitmanny/main_screens/market.dart';
-import 'package:bitmanny/onboarding/onboarding_1.dart';
-import 'package:bitmanny/splash/splash.dart';
+import 'package:bitmanny/main_screens/screen_views.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,7 +22,7 @@ class MyApp extends StatelessWidget {
         return const MaterialApp(
           title: 'Bitmanny',
           debugShowCheckedModeBanner: false,
-          home: BitcoinView(),
+          home: ScreenViews(),
         );
       },
       // child: Onboarding1(),

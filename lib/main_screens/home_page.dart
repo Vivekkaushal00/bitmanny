@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage>
                 ],
               ),
               SizedBox(height: 20.h),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 child: Image.asset('assets/images/trade.png',
                 fit: BoxFit.cover,
@@ -141,8 +141,8 @@ class _HomePageState extends State<HomePage>
                   SvgPicture.asset('assets/icons/speaker.svg'),
                   Text('FLIX [FLIP Token] will be listed on LBank Innovation...',
                       style: GoogleFonts.roboto(
-                          color: Colors.white, fontSize: 12.sp)),
-                  SvgPicture.asset('assets/icons/drag.svg')
+                          color: Colors.white, fontSize: 11.sp)),
+                  SvgPicture.asset('assets/icons/drag.svg', height: 10.h, width: 10.w,)
                 ],
               ),
               Divider(color: Colors.grey.shade700),
@@ -163,7 +163,7 @@ class _HomePageState extends State<HomePage>
               Divider(color: Colors.grey.shade700),
               Wrap(
                 direction: Axis.horizontal,
-                spacing: 32.w,
+                spacing: 28.w,
                 runSpacing: 10,
                 children: List.generate(
                   icons.length,
@@ -226,7 +226,7 @@ class _HomePageState extends State<HomePage>
                 ],
               ),
               SizedBox(height: 10.h),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: 200.h,
                 child: Column(
@@ -341,7 +341,7 @@ class _HomePageState extends State<HomePage>
     return Container(
       child: Column(
         children: [
-          Container(
+          SizedBox(
               width: 35.w,
               height: 35.h,
               child: SvgPicture.asset(icons)),

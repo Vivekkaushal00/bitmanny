@@ -23,9 +23,9 @@ class _VerificationState extends State<Verification> {
         title: Text('Verification', style: GoogleFonts.poppins(fontSize: 18.sp,  color: Colors.white, fontWeight: FontWeight.w600)),
         leading: GestureDetector(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Signup()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const Signup()));
           },
-            child: Icon(Icons.arrow_back, color: Colors.white)),
+            child: const Icon(Icons.arrow_back, color: Colors.white)),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -42,8 +42,8 @@ class _VerificationState extends State<Verification> {
                 fieldHeight: 50.h,
                 fieldWidth: 50.w,
                 borderRadius: BorderRadius.circular(10),
-                enabledBorderColor: Color(0xffF5C249),
-                focusedBorderColor: Color(0xffF5C249),
+                enabledBorderColor: const Color(0xffF5C249),
+                focusedBorderColor: const Color(0xffF5C249),
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 textStyle: GoogleFonts.poppins(fontSize: 24.sp, color: Colors.white, fontWeight: FontWeight.w500),
               ),

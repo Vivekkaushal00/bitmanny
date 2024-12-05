@@ -41,10 +41,10 @@ class _AppBottomBarState extends State<AppBottomBar> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       backgroundColor: Colors.transparent,
       bottomNavigationBar: BottomAppBar(
-        color: Color(0xff262932),
-        shape: CircularNotchedRectangle(),
+        color: const Color(0xff262932),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 10,
-        child: Container(
+        child: SizedBox(
           height: 80.h,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

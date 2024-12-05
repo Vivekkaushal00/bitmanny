@@ -19,9 +19,9 @@ class _ForgotState extends State<Forgot> {
         backgroundColor: Colors.black,
         leading: GestureDetector(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));
           },
-            child: Icon(Icons.arrow_back, color: Colors.white,)),
+            child: const Icon(Icons.arrow_back, color: Colors.white,)),
         centerTitle: true,
         title: Text(
           'Forgot Password',
@@ -43,14 +43,14 @@ class _ForgotState extends State<Forgot> {
               SizedBox(height: 10.h),
               TextFormField(
                 keyboardType: TextInputType.emailAddress,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: 'Enter your email address',
                     hintStyle: GoogleFonts.poppins(
-                      fontSize: 16.sp, color: Color(0xff494D58),
+                      fontSize: 16.sp, color: const Color(0xff494D58),
                     ),
-                    fillColor: Color(0xff21242D),
+                    fillColor: const Color(0xff21242D),
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),

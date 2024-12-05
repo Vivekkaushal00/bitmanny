@@ -6,9 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Onboarding1 extends StatefulWidget {
-   Onboarding1({super.key, this.initialPage = 0});
+  Onboarding1({super.key, this.initialPage = 0});
 
-   int? initialPage;
+  int? initialPage;
 
   @override
   State<Onboarding1> createState() => _Onboarding1State();
@@ -47,27 +47,31 @@ class _Onboarding1State extends State<Onboarding1> {
             SizedBox(
               height: 30.h,
             ),
-            pageIndex == 3 ? SizedBox(height: 10.h): GestureDetector(
-              onTap: () {
-                _pageController.animateToPage(3, duration: const Duration(milliseconds: 1), curve: Curves.easeInOut);
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text('Skip',
-                      style: GoogleFonts.poppins(
-                          color: Colors.yellow,
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w400)),
-                ],
-              ),
-            ),
+            pageIndex == 3
+                ? SizedBox(height: 10.h)
+                : GestureDetector(
+                    onTap: () {
+                      _pageController.animateToPage(3,
+                          duration: const Duration(milliseconds: 1),
+                          curve: Curves.easeInOut);
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text('Skip',
+                            style: GoogleFonts.poppins(
+                                color: Colors.yellow,
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w400)),
+                      ],
+                    ),
+                  ),
             SizedBox(
               height: 40.h,
             ),
             Expanded(
                 child: PageView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               controller: _pageController,
               itemCount: titles.length,
               onPageChanged: (value) {
@@ -91,7 +95,7 @@ class _Onboarding1State extends State<Onboarding1> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Signup()));
+                                    builder: (context) => const Signup()));
                           },
                           child: Container(
                             width: 150.w,
@@ -116,7 +120,7 @@ class _Onboarding1State extends State<Onboarding1> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Login()));
+                                    builder: (context) => const Login()));
                           },
                           child: Container(
                             width: 150.w,
@@ -160,7 +164,9 @@ class _Onboarding1State extends State<Onboarding1> {
                                   duration: const Duration(milliseconds: 500),
                                   curve: Curves.easeInOut);
                             } else {
-                              _pageController.nextPage(duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+                              _pageController.nextPage(
+                                  duration: const Duration(milliseconds: 500),
+                                  curve: Curves.easeInOut);
                             }
                           },
                           child: const CircleAvatar(

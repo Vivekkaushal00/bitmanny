@@ -92,7 +92,7 @@ class _MarketState extends State<Market> with SingleTickerProviderStateMixin {
                 children: [
                   SvgPicture.asset('assets/icons/bitcoin.svg',
                       width: 36.w, height: 36.h),
-                  SizedBox(width: 15.w),
+                  SizedBox(width: 10.w),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -112,8 +112,8 @@ class _MarketState extends State<Market> with SingleTickerProviderStateMixin {
                       )
                     ],
                   ),
-                  SizedBox(width: 60.w),
-                  Container(
+                  SizedBox(width: 50.w),
+                  SizedBox(
                     width: 60.w,
                     height: 20.h,
                     child: Sparkline(

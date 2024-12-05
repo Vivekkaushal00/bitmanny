@@ -1,5 +1,4 @@
 import 'package:bitmanny/login_screens/forgot.dart';
-import 'package:bitmanny/main.dart';
 import 'package:flutter/material.dart';
 import 'package:bitmanny/onboarding/onboarding_1.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -37,7 +36,7 @@ class _LoginState extends State<Login> {
                 ),
               );
             },
-            child: Icon(
+            child: const Icon(
               Icons.arrow_back,
               color: Colors.white,
             )),
@@ -58,15 +57,15 @@ class _LoginState extends State<Login> {
               SizedBox(height: 10.h),
               TextFormField(
                 keyboardType: TextInputType.emailAddress,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: 'Enter your email address',
                     hintStyle: GoogleFonts.poppins(
                       fontSize: 16.sp,
-                      color: Color(0xff494D58),
+                      color: const Color(0xff494D58),
                     ),
-                    fillColor: Color(0xff21242D),
+                    fillColor: const Color(0xff21242D),
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -84,19 +83,19 @@ class _LoginState extends State<Login> {
               TextFormField(
                 keyboardType: TextInputType.visiblePassword,
                 obscureText: true,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     focusColor: Colors.white,
-                    suffixIcon: Icon(
+                    suffixIcon: const Icon(
                       Icons.remove_red_eye,
                       size: 30,
                     ),
                     hintText: 'Enter your password',
                     hintStyle: GoogleFonts.poppins(
                       fontSize: 16.sp,
-                      color: Color(0xff494D58),
+                      color: const Color(0xff494D58),
                     ),
-                    fillColor: Color(0xff21242D),
+                    fillColor: const Color(0xff21242D),
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -106,7 +105,7 @@ class _LoginState extends State<Login> {
               GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Forgot()));
+                        MaterialPageRoute(builder: (context) => const Forgot()));
                   },
                   child: Text(
                     'Forgot password?',
