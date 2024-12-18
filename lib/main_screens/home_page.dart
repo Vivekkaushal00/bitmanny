@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage>
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 60),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -1,6 +1,5 @@
 import 'package:bitmanny/bottom_bar/bottom_bar.dart';
 import 'package:bitmanny/main_screens/bitcoin_view.dart';
-import 'package:bitmanny/main_screens/screen_views.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
         return const MaterialApp(
           title: 'Bitmanny',
           debugShowCheckedModeBanner: false,
-          home: ScreenViews(),
+          home: AppBottomBar(),
         );
       },
       // child: Onboarding1(),
