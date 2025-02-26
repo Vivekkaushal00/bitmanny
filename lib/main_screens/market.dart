@@ -1,3 +1,4 @@
+import 'package:bitmanny/main_screens/bitcoin_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -88,60 +89,65 @@ class _MarketState extends State<Market> with SingleTickerProviderStateMixin {
                 ],
               ),
               SizedBox(height: 10.h),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SvgPicture.asset('assets/icons/bitcoin.svg',
-                      width: 36.w, height: 36.h),
-                  SizedBox(width: 10.w),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Bitcoin',
-                        style: GoogleFonts.poppins(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        'BTC',
-                        style: GoogleFonts.poppins(
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.grey),
-                      )
-                    ],
-                  ),
-                  SizedBox(width: 50.w),
-                  SizedBox(
-                    width: 60.w,
-                    height: 20.h,
-                    child: Sparkline(
-                      data: const [0.0, 1.0, 1.5, 2.0, 0.0, 0.0, -0.5, -1.0, -0.5, 0.0, 0.0],
-                      lineWidth: 2,
-                      lineColor: const Color(0xff00C566),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const BitcoinView(),));
+                },
+                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SvgPicture.asset('assets/icons/bitcoin.svg',
+                        width: 36.w, height: 36.h),
+                    SizedBox(width: 10.w),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Bitcoin',
+                          style: GoogleFonts.poppins(
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                        ),
+                        Text(
+                          'BTC',
+                          style: GoogleFonts.poppins(
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
+                        )
+                      ],
                     ),
-                  ),
-                  SizedBox(width: 30.w),
-                  Column(
-                    children: [
-                      Text(
-                        '\$46.625,32',
-                        style: GoogleFonts.poppins(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white),
+                    SizedBox(width: 50.w),
+                    SizedBox(
+                      width: 60.w,
+                      height: 20.h,
+                      child: Sparkline(
+                        data: const [0.0, 1.0, 1.5, 2.0, 0.0, 0.0, -0.5, -1.0, -0.5, 0.0, 0.0],
+                        lineWidth: 2,
+                        lineColor: const Color(0xff00C566),
                       ),
-                      Text(
-                        '24,55%',
-                        style: GoogleFonts.poppins(
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.green),
-                      ),
-                    ],
-                  )
-                ],
+                    ),
+                    SizedBox(width: 30.w),
+                    Column(
+                      children: [
+                        Text(
+                          '\$46.625,32',
+                          style: GoogleFonts.poppins(
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white),
+                        ),
+                        Text(
+                          '24,55%',
+                          style: GoogleFonts.poppins(
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.green),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               )
             ],
           ),
